@@ -21,7 +21,7 @@ class FunctionalExpressionTest {
             OoPlus(OoValue(13), OoValue(5)),
             OoPlus(OoValue(7), OoValue(11))
         )
-        assertEquals(36, expr.eval())
+        assertEquals(36, expr.evaluate())
     }
 
     @Test
@@ -40,7 +40,7 @@ class FunctionalExpressionTest {
             OoMinus(OoValue(13), OoValue(5)),
             OoPlus(OoValue(7), OoValue(11))
         )
-        assertEquals(26, expr.eval())
+        assertEquals(26, expr.evaluate())
     }
 
 }

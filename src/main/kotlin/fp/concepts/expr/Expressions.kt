@@ -21,12 +21,12 @@ package fp.concepts.expr
  */
 
     abstract class OoExpression(){
-        abstract fun eval(): Int
+        abstract fun evaluate(): Int
 }
     class OoPlus(val left: OoExpression, val right: OoExpression): OoExpression(){
-        override fun eval(): Int = left.eval() + right.eval()
+        override fun evaluate(): Int = left.evaluate() + right.evaluate()
     }
 
     class OoValue(val v: Int):OoExpression() {
-        override fun eval(): Int = v
+        override fun evaluate(): Int = v
     }

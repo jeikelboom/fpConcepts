@@ -16,5 +16,5 @@ package fp.concepts.expr
         }
 
     class OoMinus(val left: OoExpression, val right: OoExpression): OoExpression() {
-        override fun eval(): Int = left.eval() - right.eval()
+        override fun evaluate(): Int = left.evaluate() - right.evaluate()
     }
