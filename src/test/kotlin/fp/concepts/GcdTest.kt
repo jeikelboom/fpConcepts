@@ -8,7 +8,7 @@ class GcdTest {
 
     @Test
     fun gcd42and18() {
-        val gcd = GCD.gcd(18, 42)
+        val gcd = gcd(18, 42)
         Assertions.assertEquals(6, gcd)
     }
 }
