@@ -21,14 +21,14 @@ class Good<V>(val value: V) : Outcome<V>() {
         }
 }
 
-class Bad<RV>(val e: Exception): Outcome<RV>() {
-    override fun <A> map(mapper: (RV) -> A)= this as Outcome<A>
-    override fun <A> flatMap(monadicFunction: (RV) -> Outcome<A>)= this as Outcome<A>
+class Bad<V>(val e: Exception): Outcome<V>() {
+    override fun <A> map(mapper: (V) -> A)= this as Outcome<A>
+    override fun <A> flatMap(monadicFunction: (V) -> Outcome<A>)= this as Outcome<A>
 }
 
-class Ugly<RV>(val message:String) : Outcome<RV>() {
-    override fun <A> map(mapper: (RV) -> A): Outcome<A> = this as Outcome<A>
-    override fun <A> flatMap(monadicFunction: (RV) -> Outcome<A>): Outcome<A> = this as Outcome<A>
+class Ugly<V>(val message:String) : Outcome<V>() {
+    override fun <A> map(mapper: (V) -> A): Outcome<A> = this as Outcome<A>
+    override fun <A> flatMap(monadicFunction: (V) -> Outcome<A>): Outcome<A> = this as Outcome<A>
 }
 
 fun <T> pure(a: T) = Good(a)
